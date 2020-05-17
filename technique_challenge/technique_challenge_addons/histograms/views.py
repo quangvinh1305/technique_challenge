@@ -56,11 +56,14 @@ def word_count(sentence):
 
 class HistogramsView(APIView):
     def get(self, request, format=None):
-        url = request.GET.get('url')
-        page = requests.get(url)
-        print(url)
-        clean_text = ' '.join(BeautifulSoup(page.content, "html.parser").stripped_strings)
-        histogramsAll = word_count(clean_text)
-        histogramSorted = {k: v for k, v in sorted(histogramsAll.items(), key=lambda item: item[1], reverse=True)}
-        sliceOrderedDict = OrderedDict(itertools.islice(histogramSorted.items(), 100))
-        return Response(sliceOrderedDict)
+        try:
+            url = request.GET.get('url')
+            page = requests.get(url)
+            print(url)
+            clean_text = ' '.join(BeautifulSoup(page.content, "html.parser").stripped_strings)
+            histogramsAll = word_count(clean_text)
+            histogramSorted = {k: v for k, v in sorted(histogramsAll.items(), key=lambda item: item[1], reverse=True)}
+            sliceOrderedDict = OrderedDict(itertools.islice(histogramSorted.items(), 100))
+            return Response(sliceOrderedDict)
+        except:
+            return Response({'error': "The url you input can't reach"})

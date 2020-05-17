@@ -28,7 +28,7 @@
     </v-row>
     <v-row class="text-center">
       <v-col cols="12">
-        <v-text-field placeholder="Enter Your Url Here" v-model='url' @input="changeUrl"></v-text-field>
+        <v-text-field placeholder="Enter Your Url Here" v-model='url' @input="histogramsForUrl"></v-text-field>
       </v-col>
       <v-col cols="12">
         <BarChart :dataSets="dataSets" v-if="dataSets.data" />
@@ -47,15 +47,11 @@
     async mounted() {
     },
     async created(){
-      let res = await Vue.axios.get(`http://127.0.0.1:8000/api/histograms?url=${this.url}`);
-      Vue.set(this.dataSets, 'labels', Object.keys(res.data));
-      Vue.set(this.dataSets, 'data', Object.values(res.data));
-      this.dataSets.label = "Histograms";
+      this.histogramsForUrl();
     },
     methods: {
-      async changeUrl(){
+      async histogramsForUrl(){
         let res = await Vue.axios.get(`http://127.0.0.1:8000/api/histograms?url=${this.url}`);
-        
         if(res.data){
           this.dataSets = {}
           Vue.set(this.dataSets, 'labels', Object.keys(res.data));
