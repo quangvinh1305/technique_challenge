@@ -16,11 +16,11 @@
         </h1>
 
         <p class="subheading font-weight-regular">
-          For help to preview this techinique challenge,
+          If you need help to preview this techinique challenge,
           <br>please contact me
           <a
             href="mailto:quangvinh.13@gmail.com"
-          >Discord Community</a>
+          >My Email Address</a>
         </p>
       </v-col>
 
