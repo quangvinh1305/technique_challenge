@@ -3,7 +3,7 @@
     <v-row class="text-center">
       <v-col cols="12">
         <v-img
-          :src="require('../assets/logo.svg')"
+          src="https://blog.firmsone.com/content/images/size/w100/2019/06/Free_Sample_By_Wix.jpeg"
           class="my-3"
           contain
           height="200"
@@ -16,11 +16,10 @@
         </h1>
 
         <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br>please join our online
+          For help to preview this techinique challenge,
+          <br>please contact me
           <a
-            href="https://community.vuetifyjs.com"
-            target="_blank"
+            href="mailto:quangvinh.13@gmail.com"
           >Discord Community</a>
         </p>
       </v-col>

@@ -10,7 +10,7 @@
           alt="Vuetify Logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          src="https://blog.firmsone.com/content/images/size/w100/2019/06/Free_Sample_By_Wix.jpeg"
           transition="scale-transition"
           width="40"
         />
