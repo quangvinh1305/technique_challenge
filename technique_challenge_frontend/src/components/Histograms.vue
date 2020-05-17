@@ -60,7 +60,7 @@
       },
     },
     data: () => ({
-      url: 'http://www.packtpub.com/books',
+      url: 'https://apps.apple.com/vn/app/elsa-speak-accent-reduction/id1083804886',
       dataSets: {},
       ecosystem: [
       ],
